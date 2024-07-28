@@ -1,262 +1,364 @@
-<div class="container">
-  <div id="red-bar3" class="bar"></div>
-  <div id="green-bar2" class="bar"></div>
-  <div id="yellow-bar1" class="bar"></div>
-</div>
-
-
-        
-
-
-   <div class="ver-text">  <h4>Expires,in,25:12:34:05 </h4>
-</div>
-
-
-
-
-
-
-<!-- codigo fecha y hora -->
-
-<body onload="startTime()">
-    <div id="clockdate">
-  <div class="clockdate-wrapper">
-    <div id="clock"></div>
-    <div id="date"></div>
-    <div id="text"></div>
-    
-    <h1> </h1>
-    <div class="vertical-text">  <h4>Mon,Jun,5</h3>
-</div>
-
-  <style>
-      
-     
-Body{
-      
- background-image: url(https://raw.githubusercontent.com/Infinitypr00/landing-page-three/master/Polish_20230605_165538580.jpg); background-repeat: no-repeat; background-size: ;  
- background-size: 325px 550px;
- 
-
- 
- max-height:10px;
- max-width:150px;
- 
- 
-  
-    
-}
-
-
-
-
-.container {
-  display: flex;
-  justify-content: vertical;
-  align-items: vertical;
-  height: 100px;
-}
-
-
-.bar {
-
-  width: 2px;
-  height: 300px;
-  margin: 0px;
-  transition: background-color 0s;
-
-
-}
-
-#red-bar3 {
-  background-color: red;
-  transform:90px;
-  
-  position: relative;top: 190px; 
-  left: 45px;
-  Width:22px;
-  
-  
-}
-  
-
-
-#green-bar2 {
-  background-color: green;
- position: relative;top: 20px; 
-  left: 23px; 
-  Width:22px;
-  
-  
-  
-}
-
-#yellow-bar1 {
-  background-color: yellow;
-    position: relative;top: 1px; 
-  left: 1px; 
-  Width:22px;
-  Height:150px;
-  right:1px;
-}
-
-
-
-
-
-/* codigo fwcha y hora */
-
-
-
-
-
-.clockdate-wrapper {
-    background-color:white;
-    padding:2px;
-    max-width:200px;
-    width:100%;
-    text-align:fixed;
-    border-radius:px;
-    margin-right:10;
-    margin-top:10%;
-    
-}
-#clock{
-    background-color:white;
-    font-family: sans-serif;
-    font-size:20px;
-    text-shadow:33px;
-    color:black;
-    left:10px;
-    
-     position: relative;top: 220px; 
-  
-  webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-270deg);
-    
-    
-    
-}
-#clock span {
-    color:black;
-    text-shadow:100;
-    font-size:18px;
-    position:relative;
-    top:-0px;
-    left:-1px;
-    color-text:black;
-}
-
-
-
-.ver-text {
-
-font-size: 13px;
-Width:30px;
-Height:10px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(360deg);
-  position: relative;
-  Top:120px;
-  left: 1px; /* Ajusta esta propiedad para mover el texto hacia la derecha */
-}
-
-
-
-
-
-
-
-
-
-.vertical-text {
-
-font-size: 20px;
-Width:48px;
-Height:10px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(360deg);
-  position: relative;
-  Top:10px;
-  left: 75px; /* Ajusta esta propiedad para mover el texto hacia la derecha */
-}
-
-
-
-
-
-#date {
-    letter-spacing:10px;
-    font-size:20px;
-    font-family:arial,sans-serif;
-    color:;
-    
-    position: relative;top: 10px; 
-  left: 8px;
-  webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg); transform: rotate(-270deg);
-}
-
- 
-      
-  </style>  
-  
-  
-  <script>
-      
-      setInterval(changeColors, 1000);
-
-function changeColors() {
-  var redBar = document.getElementById("red-bar3");
-  var greenBar = document.getElementById("green-bar2");
-  var yellowBar = document.getElementById("yellow-bar1");
-
-  if (redBar.style.backgroundColor === "white") {
-    redBar.style.backgroundColor = "red";
-    greenBar.style.backgroundColor = "green";
-    yellowBar.style.backgroundColor = "yellow";
-  } else {
-    redBar.style.backgroundColor = "white";
-    greenBar.style.backgroundColor = "white";
-    yellowBar.style.backgroundColor = "white";
-  }
-}
-
-
-
-
-
-
-
-
-// Codigo fechay hora //
-
-function startTime() {
-    var today = new Date();
-    var hr = today.getHours();
-    var min = today.getMinutes();
-    var sec = today.getSeconds();
-    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
-    hr = (hr == 0) ? 12 : hr;
-    hr = (hr > 12) ? hr - 12 : hr;
-    //Add a zero in front of numbers<10
-    hr = checkTime(hr);
-    min = checkTime(min);
-    sec = checkTime(sec);
-    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Hámster</title>
+    <style>
+        body {
+            background-image: url('https://raw.githubusercontent.com/Infinitypr00/Passbuss/main/Polish_20240720_144142751.jpg');
+            background-size: cover; /* Ajusta el tamaño de la imagen para que cubra toda la pantalla */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            padding: 1px;
+            border-radius: 1px;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .top-left .coin-counter,
+        .top-left .second-counter {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .top-left img {
+            width: 40px;
+            height: 30px;
+            margin-right: 5px;
+        }
+
+        .bar-container-top {
+            width: 100px;
+            height: 30px;
+            background-color: #3a2b97;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .energy-bar {
+            height: 100%;
+            width: 25%; /* Cada segmento ocupa el 25% del total */
+            background-color: green;
+            border-right: 1px solid #fff;
+            transition: background-color 0.3s;
+        }
+
+        .energy-bar.red {
+            background-color: red;
+        }
+
+        .bar-container {
+            width: 250px;
+            height: 20px;
+            background-color: #cc0000;
+            position: relative;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        .bar {
+            height: 100%;
+            width: 100%;
+            background-color: yellow;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: width 0.1s;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .show-button {
+        Margin-top:50px;
+            width: 50px;
+            height: 10px;
+            padding: 20px 50px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .show-button.red {
+            background-color: #dc3545;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .counter-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .counter {
+            font-size: 2em;
+            margin-left: 10px;
+            Background-color:black;
+        }
+
+        .counter img {
+            width: 30px;
+            height: 30px;
+        }
+
+        button {
+            width: 200px;
+            height: 200px;
+            border-radius: 500%;
+            background-color: black;
+            color: white;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button img {
+            width: 200px;
+            height: 200px;
+        }
+
+        #plusOne {
+            margin-left: 40px;
+            position: absolute;
+            top: 50px;
+            font-size: 2.1em;
+            color: green;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+
+        #lowBattery {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            background-color: red;
+            width: 90px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-left">
+        <div class="coin-counter">
+            <img src="https://raw.githubusercontent.com/Infinitypr00/Passbuss/main/Polish_20240720_115135132.png" alt="Coin">
+            <span id="coinCounter">$00.00</span>
+        </div>
+        <div class="second-counter">
+            <img src="https://raw.githubusercontent.com/Infinitypr00/Passbuss/main/Polish_20240720_115919286.png" alt="Coin">
+            <span id="secondCounter">0.000000</span>
+        </div>
+    </div>
+    <div class="bar-container-top">
+        <div class="energy-bar" id="energy1"></div>
+        <div class="energy-bar" id="energy2"></div>
+        <div class="energy-bar" id="energy3"></div>
+        <div class="energy-bar" id="energy4"></div>
+    </div>
+    <div class="top-right">
+        <button class="show-button" id="showButton">menú</button>
+    </div>
+    <div class="container">
+        <div class="counter-container">
+            <div id="plusOne">+1</div>
+            <div class="counter">
+                <img src="https://raw.githubusercontent.com/Infinitypr00/Passbuss/main/Polish_20240720_115919286.png" alt="$">
+                <span id="counter">0</span>
+            </div>
+        </div>
+        <div class="bar-container">
+            <div class="bar" id="bar" style="width: 100%;"></div>
+        </div>
+        <button id="clickButton">
+            <img src="https://raw.githubusercontent.com/Infinitypr00/Passbuss/main/Polish_20240720_115135132.png" alt="Icono">
+        </button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/7272/7272731.png" alt="Low Battery" id="lowBattery">
     
     
     
-    var time = setTimeout(function(){ startTime() }, 500);
-}
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
-      
-  </script>
+    <script async src="https://www.highrevenuenetwork.com/pc3aiavn4a?key=52a351b561852b9ebd463a76a5874a8d"></script>
     
-  
+    
+    
+    <script>
+    
+    
+    
+    
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const bar = document.getElementById("bar");
+            const counter = document.getElementById("counter");
+            const clickButton = document.getElementById("clickButton");
+            const plusOne = document.getElementById("plusOne");
+            const energyBars = [
+                document.getElementById("energy1"),
+                document.getElementById("energy2"),
+                document.getElementById("energy3"),
+                document.getElementById("energy4")
+            ];
+            const showButton = document.getElementById("showButton");
+            const coinCounter = document.getElementById("coinCounter");
+            const lowBattery = document.getElementById("lowBattery");
+            const secondCounter = document.getElementById("secondCounter");
+
+            let count = 0;
+            let barWidth = 100;
+            let currentEnergyBar = 0;
+            let coinValue = 0;
+            let batteryInterval;
+            let buttonColorInterval;
+            let smallCounter = 0;
+
+            function resetBar() {
+                barWidth = 100;
+                bar.style.width = barWidth + '%';
+                energyBars.forEach(bar => bar.classList.remove('red'));
+                currentEnergyBar = 0;
+            }
+
+            function showLowBattery() {
+                lowBattery.style.display = 'block';
+                setTimeout(() => {
+                    lowBattery.style.display = 'none';
+                }, 500);
+            }
+
+            function startButtonColorChange() {
+                buttonColorInterval = setInterval(() => {
+                    showButton.classList.toggle('red');
+                }, 1000);
+            }
+
+            function stopButtonColorChange() {
+                clearInterval(buttonColorInterval);
+                showButton.classList.remove('red');
+            }
+
+            function startBatteryLow() {
+                batteryInterval = setInterval(() => {
+                    if (currentEnergyBar === energyBars.length) {
+                        showLowBattery();
+                    }
+                }, 850);
+            }
+
+            function stopBatteryLow() {
+                clearInterval(batteryInterval);
+                lowBattery.style.display = 'none';
+            }
+
+            clickButton.addEventListener("click", function() {
+                if (currentEnergyBar < energyBars.length) {
+                    count++;
+                    smallCounter++; 
+                    counter.textContent = count;
+                    secondCounter
+                    secondCounter.textContent = (smallCounter * 0.00000001).toFixed(8);
+
+                    // Actualiza coinValue y coinCounter cada 50 clics
+                    if (smallCounter % 5000 === 0) {
+                        coinValue += 0.01;
+                        coinCounter.textContent = `$${coinValue.toFixed(2)}`;
+                    }
+
+                    barWidth -= 0.5;
+                    bar.style.width = barWidth + '%';
+
+                    if (count % 200 === 0) {
+                        if (currentEnergyBar < energyBars.length) {
+                            energyBars[currentEnergyBar].classList.add('red');
+                            currentEnergyBar++;
+                        }
+
+                        if (currentEnergyBar === energyBars.length) {
+                            barWidth = 0; // Detiene el llenado de la barra cuando todos los segmentos están rojos
+                            bar.style.width = barWidth + '%';
+                            stopButtonColorChange();
+                            startBatteryLow();
+                        } else {
+                            barWidth = 100; // Reinicia la barra amarilla para el próximo conjunto de clics
+                            bar.style.width = barWidth + '%';
+                        }
+                    }
+
+                    // Mostrar la imagen de batería baja solo si todas las barras están rojas
+                    if (currentEnergyBar === energyBars.length) {
+                        showLowBattery();
+                    }
+
+                    // Vibración al hacer clic
+                    if (navigator.vibrate) {
+                        navigator.vibrate(140);
+                    }
+                }
+            });
+
+            showButton.addEventListener("click", function() {
+                alert("Show button clicked");
+            });
+        });
+    </script>     
+    </body>
+</html>
+    </body>
+  </html>
